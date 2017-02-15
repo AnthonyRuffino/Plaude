@@ -1,4 +1,4 @@
-package hello;
+package org.ncidence.plaude.messages;
 
 public class IdentifyMessage {
 	private String name;

@@ -1,4 +1,4 @@
-package hello;
+package org.ncidence.plaude.messages;
 
 public class ChatMessage {
 	private String text;

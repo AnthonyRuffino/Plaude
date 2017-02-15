@@ -1,7 +1,10 @@
-package hello;
+package org.ncidence.plaude.controllers;
 
 import java.util.concurrent.atomic.AtomicLong;
 
+import org.ncidence.plaude.messages.ChatMessage;
+import org.ncidence.plaude.messages.IdentifyMessage;
+import org.ncidence.plaude.messages.RosterMessage;
 import org.springframework.messaging.handler.annotation.MessageMapping;
 import org.springframework.messaging.handler.annotation.SendTo;
 import org.springframework.stereotype.Controller;

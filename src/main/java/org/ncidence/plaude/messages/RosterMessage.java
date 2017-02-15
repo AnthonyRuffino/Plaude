@@ -1,4 +1,4 @@
-package hello;
+package org.ncidence.plaude.messages;
 
 import java.util.HashSet;
 import java.util.Set;
