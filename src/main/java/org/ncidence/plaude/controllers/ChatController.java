@@ -12,9 +12,9 @@ import org.springframework.stereotype.Controller;
 @Controller
 public class ChatController {
 	
-	private AtomicLong messageIdFactory = new AtomicLong();
+	AtomicLong messageIdFactory = new AtomicLong();
 
-	private RosterMessage rosterMessage = new RosterMessage();
+	RosterMessage rosterMessage = new RosterMessage();
 
 	@MessageMapping("/identify")
 	@SendTo("/topic/roster")

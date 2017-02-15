@@ -1,26 +1,21 @@
 package org.ncidence.plaude.messages;
 
-import java.util.HashSet;
-import java.util.Set;
+import java.util.ArrayList;
+import java.util.List;
 
 public class RosterMessage {
-	private Set<String> names = new HashSet<>();
+	private List<String> names = new ArrayList<>();
 
 	public RosterMessage() {
 		super();
 	}
 
-	public Set<String> getNames() {
+	public List<String> getNames() {
 		return names;
 	}
 
-	public void setNames(Set<String> names) {
+	public void setNames(List<String> names) {
 		this.names = names;
 	}
 
-	
-	
-	
-	
-	
 }
