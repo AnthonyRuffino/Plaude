@@ -14,13 +14,15 @@ function ChatController($scope) {
 	stompClient.connect({}, function(frame) {
 		console.log('Connected: ' + frame);
 
-		stompClient.subscribe('/topic/identify', function(rosterMessage) {
+		stompClient.subscribe('/topic/roster', function(rosterMessage) {
 			showRoster(JSON.parse(rosterMessage.body).names);
 		});
 
 		stompClient.subscribe('/topic/chat', function(chatMessage) {
 			addChatMessage(JSON.parse(chatMessage.body));
 		});
+		
+		identify("Anonymous");
 	});
 
 	
@@ -31,6 +33,7 @@ function ChatController($scope) {
 	}
 
 	function showRoster(names) {
+		console.log('showRoster:', names);
 		$scope.roster = names;
 		$scope.$apply();
 	}
@@ -45,8 +48,12 @@ function ChatController($scope) {
 	};
 
 	$scope.setName = function setName() {
-		stompClient.send("/app/identify", {}, JSON.stringify({
-			'name' : $scope.name
-		}));
+		identify($scope.name);
 	};
+	
+	function identify(name) {
+		stompClient.send("/app/identify", {}, JSON.stringify({
+			'name' : name
+		}));
+	}
 }
