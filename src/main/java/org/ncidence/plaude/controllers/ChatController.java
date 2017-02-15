@@ -28,8 +28,6 @@ public class ChatController {
 	public RosterMessage identify(@Payload IdentifyMessage identifyMessage, SimpMessageHeaderAccessor headerAccessor)
 			throws Exception {
 		String sessionId = headerAccessor.getSessionAttributes().get("sessionId").toString();
-		userMap.put(sessionId, identifyMessage.getName());
-		rosterMessage.getNames().add(identifyMessage.getName());
 		return identify(identifyMessage, sessionId);
 	}
 
