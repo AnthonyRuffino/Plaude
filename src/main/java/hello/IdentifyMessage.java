@@ -1,12 +1,12 @@
 package hello;
 
-public class HelloMessage {
+public class IdentifyMessage {
 	private String name;
 
-    public HelloMessage() {
+    public IdentifyMessage() {
     }
 
-    public HelloMessage(String name) {
+    public IdentifyMessage(String name) {
         this.name = name;
     }
 
