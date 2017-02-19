@@ -9,3 +9,5 @@ If you are using Maven, you can run the application using ./mvnw spring-boot:run
 java -jar target/plaude-0.0.1-SNAPSHOT.jar
 
 The inial code for this project came from here:  https://spring.io/guides/gs/messaging-stomp-websocket/
+
+:)
